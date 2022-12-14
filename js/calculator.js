@@ -12,3 +12,17 @@ document.getElementById("key-pad").addEventListener("click", function (event) {
     displayTypedNumber.value = newNumber;
   }
 });
+
+//verify pin
+
+function verifyPin() {
+  const currentPin = document.getElementById("display-pin").value;
+  const typedPin = document.getElementById("typed-numbers").value;
+  if (currentPin == typedPin) {
+    document.getElementById("notify-success").style.display = "block";
+    document.getElementById("notify-fail").style.display = "none";
+  } else {
+    document.getElementById("notify-success").style.display = "none";
+    document.getElementById("notify-fail").style.display = "block";
+  }
+}
